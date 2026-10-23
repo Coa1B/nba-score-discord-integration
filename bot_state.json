@@ -1,0 +1,297 @@
+{
+  "games": {
+    "401909093": {
+      "slate_date": "20261022",
+      "posted": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "final"
+      ],
+      "snapshot": {
+        "period": 4,
+        "state": "post",
+        "is_final": true,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_FINAL"
+      }
+    },
+    "401909094": {
+      "slate_date": "20261022",
+      "posted": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "final"
+      ],
+      "snapshot": {
+        "period": 4,
+        "state": "post",
+        "is_final": true,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_FINAL"
+      }
+    },
+    "401909848": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909095": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909843": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909844": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909845": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909846": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909847": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909096": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909849": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909850": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909851": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909852": {
+      "slate_date": "20261023",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909853": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909854": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909855": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909857": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909858": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909856": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909859": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    },
+    "401909860": {
+      "slate_date": "20261024",
+      "posted": [],
+      "snapshot": {
+        "period": 0,
+        "state": "pre",
+        "is_final": false,
+        "is_break": false,
+        "is_halftime": false,
+        "status_name": "STATUS_SCHEDULED"
+      }
+    }
+  },
+  "dates": {
+    "20261022": {
+      "schedule_posted": false,
+      "summary_posted": true,
+      "backfilled": true
+    },
+    "20261023": {
+      "schedule_posted": true,
+      "summary_posted": false,
+      "backfilled": false
+    },
+    "20261024": {
+      "schedule_posted": true,
+      "summary_posted": false,
+      "backfilled": false
+    }
+  }
+}
