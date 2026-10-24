@@ -12,16 +12,21 @@ concurrency:
 jobs:
   poll:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
+      # Check out the branch tip (not the trigger commit) so a queued run
+      # always starts from the latest saved bot_state.json.
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 1
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -32,7 +37,10 @@ jobs:
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
         run: python nba_score_bot.py --once
 
+      # Save state even if the poll errored part-way, so posted alerts
+      # are never re-sent on the next run.
       - name: Save bot state
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,5 +49,6 @@ jobs:
             echo "No state changes"
           else
             git commit -m "chore: update bot state"
+            git pull --rebase
             git push
           fi

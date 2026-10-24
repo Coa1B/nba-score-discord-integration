@@ -32,6 +32,8 @@ EXPIRED_CLOCKS = {"0.0", "0:00", "00:00", "0.00"}
 STATE_PATH = Path(__file__).resolve().parent / "bot_state.json"
 BACKFILL_DATE = "20261022"
 LOCK_KEYS = ("1", "2", "3", "4", "final")
+# Only post halftime and final alerts.
+ALERT_KEYS = {"2", "final"}
 CLOSED_STATUS_NAMES = {
     "STATUS_FINAL",
     "STATUS_POSTPONED",
@@ -332,12 +334,36 @@ def get_home_away_from_event(event: dict):
     return away, home
 
 
-def format_score_line_from_event(event: dict) -> str:
+def _score_through_period(competitor: dict, period: int) -> Optional[int]:
+    """Score at the end of `period`, from ESPN linescores. None if not available yet."""
+    lines = competitor.get("linescores") or []
+    if len(lines) < period:
+        return None
+    try:
+        return sum(int(float(line.get("value") or 0)) for line in lines[:period])
+    except Exception:
+        return None
+
+
+def _alert_period(alert_key: str) -> Optional[int]:
+    if alert_key.startswith("ot"):
+        alert_key = alert_key[2:]
+    return int(alert_key) if alert_key.isdigit() else None
+
+
+def format_score_line_from_event(event: dict, alert_key: Optional[str] = None) -> str:
     away, home = get_home_away_from_event(event)
     away_team = away["team"]["displayName"]
     home_team = home["team"]["displayName"]
     away_score = away.get("score", "0")
     home_score = home.get("score", "0")
+    # If we noticed the break late, show the score as of the end of that quarter.
+    period = _alert_period(alert_key) if alert_key else None
+    if period:
+        away_q = _score_through_period(away, period)
+        home_q = _score_through_period(home, period)
+        if away_q is not None and home_q is not None:
+            away_score, home_score = away_q, home_q
     return f"{away_team} {away_score} – {home_team} {home_score}"
 
 
@@ -655,7 +681,7 @@ async def send_alert(channel, event: dict, event_id: str, alert_key: str, summar
     score_line = (
         get_score_line_from_summary(summary)
         if alert_key == "final"
-        else format_score_line_from_event(event)
+        else format_score_line_from_event(event, alert_key)
     )
     thumb = thumbnail_for_alert(summary, alert_key)
     await channel.send(
@@ -775,7 +801,7 @@ async def process_slate(channel, yyyymmdd: str, events: List[dict], send_quarter
         rec.snapshot = curr
 
         for alert_key in alerts_for_transition(prev, curr):
-            if alert_key in rec.posted:
+            if alert_key not in ALERT_KEYS or alert_key in rec.posted:
                 continue
             try:
                 summary = fetch_summary(event_id)
