@@ -688,36 +688,36 @@
       "slate_date": "20261027",
       "posted": [],
       "snapshot": {
-        "period": 0,
-        "state": "pre",
+        "period": 4,
+        "state": "in",
         "is_final": false,
         "is_break": false,
         "is_halftime": false,
-        "status_name": "STATUS_SCHEDULED"
+        "status_name": "STATUS_IN_PROGRESS"
       }
     },
     "401909878": {
       "slate_date": "20261027",
       "posted": [],
       "snapshot": {
-        "period": 0,
-        "state": "pre",
+        "period": 3,
+        "state": "in",
         "is_final": false,
         "is_break": false,
         "is_halftime": false,
-        "status_name": "STATUS_SCHEDULED"
+        "status_name": "STATUS_IN_PROGRESS"
       }
     },
     "401909879": {
       "slate_date": "20261027",
       "posted": [],
       "snapshot": {
-        "period": 0,
-        "state": "pre",
+        "period": 3,
+        "state": "in",
         "is_final": false,
         "is_break": false,
         "is_halftime": false,
-        "status_name": "STATUS_SCHEDULED"
+        "status_name": "STATUS_IN_PROGRESS"
       }
     },
     "401909880": {
